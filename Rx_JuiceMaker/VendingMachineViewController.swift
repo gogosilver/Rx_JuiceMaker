@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class VendingMachineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

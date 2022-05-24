@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StockViewController: UIViewController {
+class InventoryControlViewController: UIViewController {
 
     @IBOutlet weak var closeButton: UIBarButtonItem!
 

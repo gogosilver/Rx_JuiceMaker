@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D0983C3283A7BCE00FB7869 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0983C2283A7BCE00FB7869 /* StockViewController.swift */; };
+		0D0983C3283A7BCE00FB7869 /* InventoryControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0983C2283A7BCE00FB7869 /* InventoryControlViewController.swift */; };
 		0DD6D0AE283772900045B941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0AD283772900045B941 /* AppDelegate.swift */; };
 		0DD6D0B0283772900045B941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0AF283772900045B941 /* SceneDelegate.swift */; };
 		0DD6D0B2283772900045B941 /* VendingMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0B1283772900045B941 /* VendingMachineViewController.swift */; };
@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D0983C2283A7BCE00FB7869 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		0D0983C2283A7BCE00FB7869 /* InventoryControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryControlViewController.swift; sourceTree = "<group>"; };
 		0DD6D0AA283772900045B941 /* Rx_JuiceMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx_JuiceMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD6D0AD283772900045B941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD6D0AF283772900045B941 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DBD0F79283D3DCB00441F85 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0DBD0F7A283D3DD200441F85 /* VendingMachine */,
+				0DBD0F7B283D3DD900441F85 /* InventoryControl */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0DBD0F7A283D3DD200441F85 /* VendingMachine */ = {
+			isa = PBXGroup;
+			children = (
+				0DD6D0B1283772900045B941 /* VendingMachineViewController.swift */,
+			);
+			path = VendingMachine;
+			sourceTree = "<group>";
+		};
+		0DBD0F7B283D3DD900441F85 /* InventoryControl */ = {
+			isa = PBXGroup;
+			children = (
+				0D0983C2283A7BCE00FB7869 /* InventoryControlViewController.swift */,
+			);
+			path = InventoryControl;
+			sourceTree = "<group>";
+		};
 		0DD6D0A1283772900045B941 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +126,13 @@
 		0DD6D0AC283772900045B941 /* Rx_JuiceMaker */ = {
 			isa = PBXGroup;
 			children = (
+				0DBD0F79283D3DCB00441F85 /* Presentation */,
 				0DD6D0AD283772900045B941 /* AppDelegate.swift */,
 				0DD6D0AF283772900045B941 /* SceneDelegate.swift */,
-				0DD6D0B1283772900045B941 /* VendingMachineViewController.swift */,
-				0D0983C2283A7BCE00FB7869 /* StockViewController.swift */,
-				0DD6D0B3283772900045B941 /* Main.storyboard */,
 				0DD6D0B6283772910045B941 /* Assets.xcassets */,
-				0DD6D0B8283772910045B941 /* LaunchScreen.storyboard */,
 				0DD6D0BB283772910045B941 /* Info.plist */,
+				0DD6D0B8283772910045B941 /* LaunchScreen.storyboard */,
+				0DD6D0B3283772900045B941 /* Main.storyboard */,
 			);
 			path = Rx_JuiceMaker;
 			sourceTree = "<group>";
@@ -264,7 +288,7 @@
 				0DD6D0B2283772900045B941 /* VendingMachineViewController.swift in Sources */,
 				0DD6D0AE283772900045B941 /* AppDelegate.swift in Sources */,
 				0DD6D0B0283772900045B941 /* SceneDelegate.swift in Sources */,
-				0D0983C3283A7BCE00FB7869 /* StockViewController.swift in Sources */,
+				0D0983C3283A7BCE00FB7869 /* InventoryControlViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

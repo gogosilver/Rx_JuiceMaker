@@ -283,7 +283,7 @@
         <!--재고 수정-->
         <scene sceneID="vg5-XK-4cc">
             <objects>
-                <viewController id="ylo-oV-VaQ" customClass="InventoryControlViewController" customModule="Rx_JuiceMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ylo-oV-VaQ" customClass="RepositoryControlViewController" customModule="Rx_JuiceMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5xb-6l-USa">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

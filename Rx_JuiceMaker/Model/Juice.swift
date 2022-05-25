@@ -8,7 +8,7 @@
 import Foundation
 
 protocol JuiceMenu {
-
+    
     var menuName: String { get }
     var ingredients: [(fruit: Fruit, number: Int)] { get }
 }
@@ -84,7 +84,7 @@ struct MangoKiwiJuice: JuiceMenu {
 }
 
 private enum JuiceName {
-    
+
     static let strawberryBananaJuice = "딸바쥬스"
     static let strawberryJuice = "딸기쥬스"
     static let bananaJuice = "바나나쥬스"

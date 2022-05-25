@@ -26,5 +26,4 @@ class InventoryControlViewController: UIViewController {
     private func closeButtonTapped() {
         self.dismiss(animated: true, completion: nil)
     }
-
 }

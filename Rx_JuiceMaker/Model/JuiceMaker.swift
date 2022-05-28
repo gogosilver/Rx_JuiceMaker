@@ -12,7 +12,7 @@ struct JuiceMaker {
 
     private let fruitRepository = FruitRepository.shared
 
-    func makeJuice(_ juice: JuiceMenu) -> Observable<Result> {
+    func makeJuice(_ juice: Juice) -> Observable<Result> {
         let possibleStates = Observable.zip(
             juice.ingredients.map { (fruit, number) in
                 self.hasSufficientStock(of: fruit, requiredNumber: number)
@@ -20,13 +20,24 @@ struct JuiceMaker {
         )
 
         return possibleStates.map { possibleState in
-            possibleState.contains(false) ? Result.failure : Result.success
+            if possibleState.contains(false) {
+                return Result.failure
+            } else {
+                self.consumeStock(making: juice)
+                return Result.success
+            }
         }
     }
 
     private func hasSufficientStock(of fruit: Fruit, requiredNumber: Int) -> Observable<Bool> {
         fruitRepository.read(fruit).map { stock in
             stock >= requiredNumber
+        }
+    }
+
+    private func consumeStock(making juice: Juice) {
+        juice.ingredients.forEach { (fruit, number) in
+            self.fruitRepository.changeStock(of: fruit, .subtract, number: number)
         }
     }
 }

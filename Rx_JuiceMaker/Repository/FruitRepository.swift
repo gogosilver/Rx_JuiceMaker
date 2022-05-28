@@ -10,19 +10,19 @@ import RxSwift
 
 final class FruitRepository {
     
-    static let shared = FruitRepository()
+    static let shared = FruitRepository(defaultFruitStock: DefaultValue.fruitStock)
 
-    private var defaultStock: [(fruit: Fruit, number: Int)] {
+    private var stock: BehaviorSubject<[(fruit: Fruit, number: Int)]>
+
+    private init(defaultFruitStock: Int) {
         var stock = [(fruit: Fruit, number: Int)]()
 
         for fruit in Fruit.allCases {
-            stock.append((fruit, DefaultValue.fruitStock))
+            stock.append((fruit, defaultFruitStock))
         }
 
-        return stock
+        self.stock = BehaviorSubject(value: stock)
     }
-
-    private lazy var stock = BehaviorSubject(value: defaultStock)
 
     func read(_ fruit: Fruit) -> Observable<Int> {
         self.stock.map { stock in

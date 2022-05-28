@@ -24,9 +24,13 @@ struct JuiceMaker {
                 return Result.failure
             } else {
                 self.consumeStock(making: juice)
-                return Result.success
+                return Result.success(juice)
             }
         }
+    }
+
+    func read(stock: Fruit) -> Observable<Int> {
+        self.fruitRepository.read(stock)
     }
 
     private func hasSufficientStock(of fruit: Fruit, requiredNumber: Int) -> Observable<Bool> {
@@ -44,6 +48,6 @@ struct JuiceMaker {
 
 enum Result {
 
-    case success
+    case success(Juice)
     case failure
 }

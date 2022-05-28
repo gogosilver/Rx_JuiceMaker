@@ -30,27 +30,16 @@ final class FruitRepository {
         }
     }
 
-    func changeStock(of fruit: Fruit, _ changement: Changement, number: Int) {
+    func changeStock(of fruit: Fruit, number: Int) {
         do {
             var stock = try self.stock.value()
-            switch changement {
-            case .add:
-                stock[fruit.rawValue].number += number
-                self.stock.onNext(stock)
-            case .subtract:
-                stock[fruit.rawValue].number -= number
-                self.stock.onNext(stock)
-            }
+            stock[fruit.rawValue].number += number
+
+            self.stock.onNext(stock)
         } catch {
             return
         }
     }
-}
-
-enum Changement {
-
-    case add
-    case subtract
 }
 
 private enum DefaultValue {

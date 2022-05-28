@@ -37,7 +37,7 @@ struct JuiceMaker {
 
     private func consumeStock(making juice: Juice) {
         juice.ingredients.forEach { (fruit, number) in
-            self.fruitRepository.changeStock(of: fruit, .subtract, number: number)
+            self.fruitRepository.changeStock(of: fruit, number: -number)
         }
     }
 }

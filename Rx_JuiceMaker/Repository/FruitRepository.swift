@@ -52,8 +52,3 @@ enum Changement {
     case add
     case subtract
 }
-
-private enum RequestError: Error {
-
-    case unknown
-}

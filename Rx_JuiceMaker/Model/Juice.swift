@@ -7,79 +7,51 @@
 
 import Foundation
 
-protocol JuiceMenu {
-    
-    var menuName: String { get }
-    var ingredients: [(fruit: Fruit, number: Int)] { get }
-}
-
-struct StrawberryBananaJuice: JuiceMenu {
-
-    var menuName: String {
-        return JuiceName.strawberryBananaJuice
-    }
-    var ingredients: [(fruit: Fruit, number: Int)] {
-        return [(Fruit.strawberry, 10), (Fruit.banana, 1)]
-    }
-}
-
-struct StrawberryJuice: JuiceMenu {
+enum Juice {
+    case strawberryBanana
+    case strawberry
+    case banana
+    case pineapple
+    case kiwi
+    case mango
+    case mangoKiwi
 
     var menuName: String {
-        return JuiceName.strawberryJuice
+        switch self {
+        case .strawberryBanana:
+            return JuiceName.strawberryBananaJuice
+        case .strawberry:
+            return JuiceName.strawberryJuice
+        case .banana:
+            return JuiceName.bananaJuice
+        case .pineapple:
+            return JuiceName.pineappleJuice
+        case .kiwi:
+            return JuiceName.kiwiJuice
+        case .mango:
+            return JuiceName.mangoJuice
+        case .mangoKiwi:
+            return JuiceName.mangoKiwiJuice
+        }
     }
+
     var ingredients: [(fruit: Fruit, number: Int)] {
-        return [(Fruit.strawberry, 16)]
-    }
-}
-
-struct BananaJuice: JuiceMenu {
-
-    var menuName: String {
-        return JuiceName.bananaJuice
-    }
-    var ingredients: [(fruit: Fruit, number: Int)] {
-        return [(Fruit.banana, 2)]
-    }
-}
-
-struct PineappleJuice: JuiceMenu {
-
-    var menuName: String {
-        return JuiceName.pineappleJuice
-    }
-    var ingredients: [(fruit: Fruit, number: Int)] {
-        return [(Fruit.pineapple, 2)]
-    }
-}
-
-struct KiwiJuice: JuiceMenu {
-
-    var menuName: String {
-        return JuiceName.kiwiJuice
-    }
-    var ingredients: [(fruit: Fruit, number: Int)] {
-        return [(Fruit.kiwi, 3)]
-    }
-}
-
-struct MangoJuice: JuiceMenu {
-
-    var menuName: String {
-        return JuiceName.mangoJuice
-    }
-    var ingredients: [(fruit: Fruit, number: Int)] {
-        return [(Fruit.mango, 3)]
-    }
-}
-
-struct MangoKiwiJuice: JuiceMenu {
-
-    var menuName: String {
-        return JuiceName.mangoKiwiJuice
-    }
-    var ingredients: [(fruit: Fruit, number: Int)] {
-        return [(Fruit.mango, 2), (Fruit.kiwi, 1)]
+        switch self {
+        case .strawberryBanana:
+            return [(Fruit.strawberry, 10), (Fruit.banana, 1)]
+        case .strawberry:
+            return [(Fruit.strawberry, 16)]
+        case .banana:
+            return [(Fruit.banana, 2)]
+        case .pineapple:
+            return [(Fruit.pineapple, 2)]
+        case .kiwi:
+            return [(Fruit.kiwi, 3)]
+        case .mango:
+            return [(Fruit.mango, 3)]
+        case .mangoKiwi:
+            return [(Fruit.mango, 2), (Fruit.kiwi, 1)]
+        }
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D0983C3283A7BCE00FB7869 /* RepositoryControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0983C2283A7BCE00FB7869 /* RepositoryControlViewController.swift */; };
 		0D71A8242842754C00E94E4F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71A8232842754C00E94E4F /* ViewModelType.swift */; };
+		0D71A8262842764500E94E4F /* VendingMachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71A8252842764500E94E4F /* VendingMachineViewModel.swift */; };
 		0DBD0F7E283E079B00441F85 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD0F7D283E079B00441F85 /* Juice.swift */; };
 		0DBD0F80283E080400441F85 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD0F7F283E080400441F85 /* Fruit.swift */; };
 		0DBD0F83283E24E600441F85 /* FruitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD0F82283E24E600441F85 /* FruitRepository.swift */; };
@@ -49,6 +50,7 @@
 		099E49BEEA0F4EB8AD441312 /* Pods-Rx_JuiceMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_JuiceMakerTests.release.xcconfig"; path = "Target Support Files/Pods-Rx_JuiceMakerTests/Pods-Rx_JuiceMakerTests.release.xcconfig"; sourceTree = "<group>"; };
 		0D0983C2283A7BCE00FB7869 /* RepositoryControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryControlViewController.swift; sourceTree = "<group>"; };
 		0D71A8232842754C00E94E4F /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		0D71A8252842764500E94E4F /* VendingMachineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineViewModel.swift; sourceTree = "<group>"; };
 		0DBD0F7D283E079B00441F85 /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
 		0DBD0F7F283E080400441F85 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		0DBD0F82283E24E600441F85 /* FruitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRepository.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0DD6D0B1283772900045B941 /* VendingMachineViewController.swift */,
+				0D71A8252842764500E94E4F /* VendingMachineViewModel.swift */,
 			);
 			path = VendingMachine;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				0D0983C3283A7BCE00FB7869 /* RepositoryControlViewController.swift in Sources */,
 				0DBD0F7E283E079B00441F85 /* Juice.swift in Sources */,
 				0D71A8242842754C00E94E4F /* ViewModelType.swift in Sources */,
+				0D71A8262842764500E94E4F /* VendingMachineViewModel.swift in Sources */,
 				0DBD0F88283E780100441F85 /* RequestError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

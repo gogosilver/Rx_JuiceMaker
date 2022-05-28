@@ -8,41 +8,41 @@
 import Foundation
 import RxSwift
 
-class FruitRepository {
+final class FruitRepository {
     
-    static let shared = FruitRepository(defaultFruitStock: 10)
+    static let shared = FruitRepository()
 
-    private var stock = [(fruit: Fruit, number: Int)]()
+    private var defaultStock: [(fruit: Fruit, number: Int)] {
+        var stock = [(fruit: Fruit, number: Int)]()
+
+        for fruit in Fruit.allCases {
+            stock.append((fruit, DefaultValue.fruitStock))
+        }
+
+        return stock
+    }
+
+    private lazy var stock = BehaviorSubject(value: defaultStock)
 
     func read(_ fruit: Fruit) -> Observable<Int> {
-        return Observable.create { [weak self] observer in
-            guard let self = self else {
-                observer.onError(RequestError.unknown)
-
-                return Disposables.create()
-            }
-
-            let stock = self.stock[fruit.rawValue]
-            let number = stock.number
-
-            observer.onNext(number)
-
-            return Disposables.create()
+        self.stock.map { stock in
+            stock[fruit.rawValue].number
         }
     }
 
     func changeStock(of fruit: Fruit, _ changement: Changement, number: Int) {
-        switch changement {
-        case .add:
-            self.stock[fruit.rawValue].number += number
-        case .subtract:
-            self.stock[fruit.rawValue].number -= number
-        }
-    }
-
-    private init(defaultFruitStock: Int) {
-        for fruit in Fruit.allCases {
-            stock.append((fruit, defaultFruitStock))
+        do {
+            var stock = try self.stock.value()
+            switch changement {
+            case .add:
+                stock[fruit.rawValue].number += number
+                self.stock.onNext(stock)
+            case .subtract:
+                stock[fruit.rawValue].number -= number
+                self.stock.onNext(stock)
+            }
+        } catch {
+            return
         }
     }
 }
@@ -51,4 +51,9 @@ enum Changement {
 
     case add
     case subtract
+}
+
+private enum DefaultValue {
+
+    static let fruitStock = 10
 }

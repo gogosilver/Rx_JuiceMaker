@@ -99,35 +99,35 @@ final class VendingMachineViewModel: ViewModelType {
         }.asSignal(onErrorJustReturn: VendingMachineMessage.unknownError)
 
         let strawberryStock = orderResults.flatMap { _ in
-            self.juiceMaker.read(stock: .strawberry)
+            self.read(stock: .strawberry)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
         }.map { number in
             String(number)
         }
 
         let bananaStock = orderResults.flatMap { _ in
-            self.juiceMaker.read(stock: .banana)
+            self.read(stock: .banana)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
         }.map { number in
             String(number)
         }
 
         let pineappleStock = orderResults.flatMap { _ in
-            self.juiceMaker.read(stock: .pineapple)
+            self.read(stock: .pineapple)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
         }.map { number in
             String(number)
         }
 
         let kiwiStock = orderResults.flatMap { _ in
-            self.juiceMaker.read(stock: .kiwi)
+            self.read(stock: .kiwi)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
         }.map { number in
             String(number)
         }
 
         let mangoStock = orderResults.flatMap { _ in
-            self.juiceMaker.read(stock: .mango)
+            self.read(stock: .mango)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
         }.map { number in
             String(number)
@@ -139,6 +139,16 @@ final class VendingMachineViewModel: ViewModelType {
                       kiwiStock: kiwiStock,
                       mangoStock: mangoStock,
                       juiceOrderedMessageAction: juiceOrderedMessageAction)
+    }
+
+    private func read(stock fruit: Fruit) -> Observable<Int> {
+        self.juiceMaker.read().map { fruitsStock in
+            guard let fruitStock = fruitsStock[fruit] else {
+                return DefaultValue.fruitStock
+            }
+
+            return fruitStock
+        }
     }
 }
 

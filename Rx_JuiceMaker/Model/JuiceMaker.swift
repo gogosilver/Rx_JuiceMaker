@@ -29,13 +29,17 @@ struct JuiceMaker {
         }
     }
 
-    func read(stock: Fruit) -> Observable<Int> {
-        self.fruitRepository.read(stock)
+    func read() -> Observable<[Fruit: Int]> {
+        self.fruitRepository.read()
     }
 
     private func hasSufficientStock(of fruit: Fruit, requiredNumber: Int) -> Observable<Bool> {
-        fruitRepository.read(fruit).map { stock in
-            stock >= requiredNumber
+        self.read().map { fruitsStock in
+            guard let fruitStock = fruitsStock[fruit] else {
+                return false
+            }
+
+            return fruitStock >= requiredNumber
         }
     }
 

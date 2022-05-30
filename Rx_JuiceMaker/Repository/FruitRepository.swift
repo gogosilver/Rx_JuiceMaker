@@ -12,30 +12,34 @@ final class FruitRepository {
     
     static let shared = FruitRepository(defaultFruitStock: DefaultValue.fruitStock)
 
-    private var stock: BehaviorSubject<[(fruit: Fruit, number: Int)]>
+    private var stock: BehaviorSubject<[Fruit: Int]>
 
     private init(defaultFruitStock: Int) {
-        var stock = [(fruit: Fruit, number: Int)]()
+        var stock = [Fruit : Int]()
 
         for fruit in Fruit.allCases {
-            stock.append((fruit, defaultFruitStock))
+            stock.updateValue(DefaultValue.fruitStock, forKey: fruit)
         }
 
         self.stock = BehaviorSubject(value: stock)
     }
 
-    func read(_ fruit: Fruit) -> Observable<Int> {
-        self.stock.map { stock in
-            stock[fruit.rawValue].number
-        }
+    func read() -> Observable<[Fruit: Int]> {
+        self.stock.asObservable()
     }
 
     func changeStock(of fruit: Fruit, number: Int) {
         do {
-            var stock = try self.stock.value()
-            stock[fruit.rawValue].number += number
+            var latestStock = try self.stock.value()
 
-            self.stock.onNext(stock)
+            guard let stockNumber = latestStock[fruit] else {
+                return
+            }
+
+            let changedStockNumber = stockNumber + number
+            latestStock.updateValue(changedStockNumber, forKey: fruit)
+
+            self.stock.onNext(latestStock)
         } catch {
             return
         }

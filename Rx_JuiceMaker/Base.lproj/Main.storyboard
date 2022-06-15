@@ -275,6 +275,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bananaJuiceOrderButton" destination="Y3I-94-es6" id="qtS-2m-DtB"/>
+                        <outlet property="kiwiJuiceOrderButton" destination="jsy-2S-cYz" id="HmK-Mx-SYG"/>
+                        <outlet property="mangoJuiceOrderButton" destination="m2m-ii-ugg" id="EIm-PC-xLJ"/>
+                        <outlet property="mangoKiwiJuiceOrderButton" destination="ZOg-wL-ZQs" id="hEU-VY-vDv"/>
+                        <outlet property="pineappleJuiceOrderButton" destination="2T6-I6-gVI" id="RgJ-Wt-aIv"/>
+                        <outlet property="strawBerryBananaJuiceOrderButton" destination="bh0-1f-j0X" id="mfE-iW-b7a"/>
+                        <outlet property="strawberryJuiceOrderButton" destination="lXv-fg-DJ0" id="qq7-bs-7Lh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

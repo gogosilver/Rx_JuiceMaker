@@ -85,17 +85,38 @@ class VendingMachineViewController: UIViewController {
         output.strawberryStock
             .drive(self.strawberryStockLabel.rx.text)
             .disposed(by: self.disposeBag)
+
         output.bananaStock
             .drive(self.bananaStockLabel.rx.text)
             .disposed(by: self.disposeBag)
+
         output.pineappleStock
             .drive(self.pineappleStockLabel.rx.text)
             .disposed(by: self.disposeBag)
+
         output.kiwiStock
             .drive(self.kiwiStockLabel.rx.text)
             .disposed(by: self.disposeBag)
+
         output.mangoStock
             .drive(self.mangoStockLabel.rx.text)
             .disposed(by: self.disposeBag)
+
+        output.juiceOrderedMessageAction
+            .emit(onNext: { message in
+                let actions = [UIAlertController.AlertAction.action(title: "OK", style: .default, value: AlertAction.ok)]
+
+                UIAlertController
+                    .present(in: self, title: nil, message: message, style: .alert, actions: actions)
+                    .subscribe { actionTapped in
+                        print(actionTapped)
+                    }
+                    .disposed(by: self.disposeBag)
+            })
+            .disposed(by: self.disposeBag)
     }
+}
+
+private enum AlertAction {
+    case ok
 }

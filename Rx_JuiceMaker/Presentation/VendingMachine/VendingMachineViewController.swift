@@ -5,7 +5,6 @@
 //  Created by 고은 on 2022/05/20.
 //
 
-import UIKit
 import RxCocoa
 import RxSwift
 import RxGesture

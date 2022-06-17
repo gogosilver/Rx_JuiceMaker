@@ -119,9 +119,7 @@ class VendingMachineViewController: UIViewController {
                         style: .alert,
                         actions: actions
                     )
-                    .subscribe { actionTapped in
-                        print(actionTapped)
-                    }
+                    .subscribe()
                     .disposed(by: self.disposeBag)
             })
             .disposed(by: self.disposeBag)

@@ -15,16 +15,22 @@ struct JuiceMaker {
     func makeJuice(_ juice: Juice) -> Observable<Result> {
         let possibleStates = Observable.zip(
             juice.ingredients.map { (fruit, number) in
-                self.hasSufficientStock(of: fruit, requiredNumber: number)
+                self.hasSufficientStock(of: fruit, requiredNumber: number).take(1)
             }
         )
 
-        return possibleStates.map { possibleState in
-            if possibleState.contains(false) {
-                return Result.failure
-            } else {
+        return possibleStates
+            .map { possibleStates -> Bool in
+                possibleStates.reduce(true) {
+                    $0 && $1
+                }
+            }
+            .map { possibleState in
+            if possibleState {
                 self.consumeStock(making: juice)
                 return Result.success(juice)
+            } else {
+                return Result.failure
             }
         }
     }

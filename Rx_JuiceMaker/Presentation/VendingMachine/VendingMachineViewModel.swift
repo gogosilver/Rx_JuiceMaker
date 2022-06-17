@@ -89,15 +89,6 @@ final class VendingMachineViewModel: ViewModelType {
             mangoKiwiJuiceOrderResult
         )
 
-        let juiceOrderedMessageAction = orderResults.map { result -> String in
-            switch result {
-            case .success(let juice):
-                return "\(juice.menuName)\(VendingMachineMessage.successJuiceMade)"
-            case .failure:
-                return VendingMachineMessage.OutOfStock
-            }
-        }.asSignal(onErrorJustReturn: VendingMachineMessage.unknownError)
-
         let strawberryStock = orderResults.flatMap { _ in
             self.read(stock: .strawberry)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
@@ -132,6 +123,15 @@ final class VendingMachineViewModel: ViewModelType {
         }.map { number in
             String(number)
         }
+
+        let juiceOrderedMessageAction = orderResults.map { result -> String in
+            switch result {
+            case .success(let juice):
+                return "\(juice.menuName)\(VendingMachineMessage.successJuiceMade)"
+            case .failure:
+                return VendingMachineMessage.OutOfStock
+            }
+        }.asSignal(onErrorJustReturn: VendingMachineMessage.unknownError)
 
         return Output(strawberryStock: strawberryStock,
                       bananaStock: bananaStock,

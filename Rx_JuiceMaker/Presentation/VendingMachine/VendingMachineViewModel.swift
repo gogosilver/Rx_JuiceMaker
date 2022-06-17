@@ -5,9 +5,8 @@
 //  Created by 고은 on 2022/05/29.
 //
 
-import Foundation
-import RxSwift
 import RxCocoa
+import RxSwift
 
 final class VendingMachineViewModel: ViewModelType {
 

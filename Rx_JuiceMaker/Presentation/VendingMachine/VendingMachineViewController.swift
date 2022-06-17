@@ -6,8 +6,8 @@
 //
 
 import RxCocoa
-import RxSwift
 import RxGesture
+import RxSwift
 
 class VendingMachineViewController: UIViewController {
 

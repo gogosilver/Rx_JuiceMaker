@@ -37,46 +37,60 @@ final class VendingMachineViewModel: ViewModelType {
 
     func transform(input: Input) -> Output {
         let strawberryBananaJuiceOrderResult = input.strawberryBananaJuiceOrderButtonTapped
-            .flatMap { _ in
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
                 self.juiceMaker.makeJuice(.strawberryBanana)
-                    .asDriver(onErrorJustReturn: .failure)
             }
+            .asDriver(onErrorJustReturn: .failure)
 
         let strawberryJuiceOrderResult = input.strawberryJuiceOrderButtonTapped
-            .flatMap { _ in
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
                 self.juiceMaker.makeJuice(.strawberry)
-                    .asDriver(onErrorJustReturn: .failure)
             }
+            .asDriver(onErrorJustReturn: .failure)
 
         let bananaJuiceOrderResult = input.bananaJuiceOrderButtonTapped
-            .flatMap { _ in
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
                 self.juiceMaker.makeJuice(.banana)
-                    .asDriver(onErrorJustReturn: .failure)
             }
+            .asDriver(onErrorJustReturn: .failure)
 
         let pineappleJuiceOrderResult = input.pineappleJuiceOrderButtonTapped
-            .flatMap { _ in
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
                 self.juiceMaker.makeJuice(.pineapple)
-                    .asDriver(onErrorJustReturn: .failure)
             }
+            .asDriver(onErrorJustReturn: .failure)
 
         let kiwiJuiceOrderResult = input.kiwiJuiceOrderButtonTapped
-            .flatMap { _ in
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
                 self.juiceMaker.makeJuice(.kiwi)
-                    .asDriver(onErrorJustReturn: .failure)
             }
-
+            .asDriver(onErrorJustReturn: .failure)
+        
         let mangoJuiceOrderResult = input.mangoJuiceOrderButtonTapped
-            .flatMap { _ in
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
                 self.juiceMaker.makeJuice(.mango)
-                    .asDriver(onErrorJustReturn: .failure)
             }
+            .asDriver(onErrorJustReturn: .failure)
 
         let mangoKiwiJuiceOrderResult = input.mangoKiwiJuiceOrderButtonTapped
-            .flatMap { _ in
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
                 self.juiceMaker.makeJuice(.mangoKiwi)
-                    .asDriver(onErrorJustReturn: .failure)
             }
+            .asDriver(onErrorJustReturn: .failure)
 
         let orderResults = Driver.merge(
             strawberryBananaJuiceOrderResult,
@@ -88,45 +102,64 @@ final class VendingMachineViewModel: ViewModelType {
             mangoKiwiJuiceOrderResult
         )
 
-        let strawberryStock = orderResults.flatMap { _ in
-            self.read(stock: .strawberry)
-                .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }
+        let strawberryStock = orderResults
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
+                self.read(stock: .strawberry)
+            }
+            .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
             .map { number in
-            String(number)
-        }
+                String(number)
+            }
 
-        let bananaStock = orderResults.flatMap { _ in
-            self.read(stock: .banana)
-                .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }
+        let bananaStock = orderResults
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
+                self.read(stock: .banana)
+                    .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
+            }
+            .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
             .map { number in
-            String(number)
-        }
+                String(number)
+            }
 
-        let pineappleStock = orderResults.flatMap { _ in
-            self.read(stock: .pineapple)
-                .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }
+        let pineappleStock = orderResults
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
+                self.read(stock: .pineapple)
+                    .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
+            }
+            .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
             .map { number in
-            String(number)
-        }
+                String(number)
+            }
 
-        let kiwiStock = orderResults.flatMap { _ in
-            self.read(stock: .kiwi)
-                .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }
+        let kiwiStock = orderResults
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
+                self.read(stock: .kiwi)
+                    .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
+            }
+            .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
             .map { number in
-            String(number)
-        }
+                String(number)
+            }
 
-        let mangoStock = orderResults.flatMap { _ in
-            self.read(stock: .mango)
-                .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }
+        let mangoStock = orderResults
+            .asObservable()
+            .withUnretained(self)
+            .flatMap { (self, _) in
+                self.read(stock: .mango)
+                    .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
+            }
+            .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
             .map { number in
-            String(number)
-        }
+                String(number)
+            }
 
         let juiceOrderedMessageAction = orderResults.map { result -> String in
             switch result {
@@ -149,12 +182,12 @@ final class VendingMachineViewModel: ViewModelType {
     private func read(stock fruit: Fruit) -> Observable<Int> {
         self.juiceMaker.read()
             .map { fruitsStock in
-            guard let fruitStock = fruitsStock[fruit] else {
-                return DefaultValue.fruitStock
-            }
+                guard let fruitStock = fruitsStock[fruit] else {
+                    return DefaultValue.fruitStock
+                }
 
-            return fruitStock
-        }
+                return fruitStock
+            }
     }
 }
 

@@ -103,7 +103,8 @@ class VendingMachineViewController: UIViewController {
             .disposed(by: self.disposeBag)
 
         output.juiceOrderedMessageAction
-            .emit(onNext: { message in
+            .withUnretained(self)
+            .emit(onNext: { (self, message) in
                 let actions = [UIAlertController.AlertAction.action(
                     title: AlertActionMessage.ok,
                     style: .default,

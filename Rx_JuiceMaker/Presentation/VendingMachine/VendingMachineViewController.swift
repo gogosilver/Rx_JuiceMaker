@@ -111,7 +111,13 @@ class VendingMachineViewController: UIViewController {
                 )]
 
                 UIAlertController
-                    .present(in: self, title: nil, message: message, style: .alert, actions: actions)
+                    .present(
+                        in: self,
+                        title: nil,
+                        message: message,
+                        style: .alert,
+                        actions: actions
+                    )
                     .subscribe { actionTapped in
                         print(actionTapped)
                     }

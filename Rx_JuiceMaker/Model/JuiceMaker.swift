@@ -28,6 +28,7 @@ struct JuiceMaker {
             .map { possibleState in
             if possibleState {
                 self.consumeStock(making: juice)
+                
                 return Result.success(juice)
             } else {
                 return Result.failure

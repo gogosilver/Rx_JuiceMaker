@@ -92,35 +92,40 @@ final class VendingMachineViewModel: ViewModelType {
         let strawberryStock = orderResults.flatMap { _ in
             self.read(stock: .strawberry)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }.map { number in
+        }
+            .map { number in
             String(number)
         }
 
         let bananaStock = orderResults.flatMap { _ in
             self.read(stock: .banana)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }.map { number in
+        }
+            .map { number in
             String(number)
         }
 
         let pineappleStock = orderResults.flatMap { _ in
             self.read(stock: .pineapple)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }.map { number in
+        }
+            .map { number in
             String(number)
         }
 
         let kiwiStock = orderResults.flatMap { _ in
             self.read(stock: .kiwi)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }.map { number in
+        }
+            .map { number in
             String(number)
         }
 
         let mangoStock = orderResults.flatMap { _ in
             self.read(stock: .mango)
                 .asDriver(onErrorJustReturn: DefaultValue.fruitStock)
-        }.map { number in
+        }
+            .map { number in
             String(number)
         }
 
@@ -131,7 +136,8 @@ final class VendingMachineViewModel: ViewModelType {
             case .failure:
                 return VendingMachineMessage.OutOfStock
             }
-        }.asSignal(onErrorJustReturn: VendingMachineMessage.unknownError)
+        }
+            .asSignal(onErrorJustReturn: VendingMachineMessage.unknownError)
 
         return Output(strawberryStock: strawberryStock,
                       bananaStock: bananaStock,
@@ -142,7 +148,8 @@ final class VendingMachineViewModel: ViewModelType {
     }
 
     private func read(stock fruit: Fruit) -> Observable<Int> {
-        self.juiceMaker.read().map { fruitsStock in
+        self.juiceMaker.read()
+            .map { fruitsStock in
             guard let fruitStock = fruitsStock[fruit] else {
                 return DefaultValue.fruitStock
             }
@@ -153,15 +160,13 @@ final class VendingMachineViewModel: ViewModelType {
 }
 
 private enum VendingMachineMessage {
+
     static let successJuiceMade = "가 성공적으로 만들어졌습니다"
     static let OutOfStock = "재고가 부족하여 쥬스를 만들지 못했습니다"
     static let unknownError = "알 수 없는 오류가 발생했습니다"
 }
 
 private enum DefaultValue {
+
     static let fruitStock = 10
 }
-
-// 제한 오퍼레이터 모음
-// zip, withLatestFrom, take, combineLatest, merge, do, flatMap, filter, map, skip, share, observeOn,
-// compactMap, distinctUntilChanged, flatMapLatest, create, of, just, from, retry, ifEmpty

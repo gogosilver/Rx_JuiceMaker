@@ -33,7 +33,11 @@ extension UIAlertController {
         actions: [AlertAction<Action>]
     ) -> Observable<Action> {
         return Observable.create { observer in
-            let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+            let alertController = UIAlertController(
+                title: title,
+                message: message,
+                preferredStyle: style
+            )
 
             actions.enumerated().forEach { index, action in
                 let action = UIAlertAction(title: action.title, style: action.style) { _ in
@@ -44,7 +48,9 @@ extension UIAlertController {
             }
 
             viewController.present(alertController, animated: true, completion: nil)
-            return Disposables.create { alertController.dismiss(animated: true, completion: nil) }
+            return Disposables.create {
+                alertController.dismiss(animated: true, completion: nil)
+            }
         }
     }
 }

@@ -104,7 +104,11 @@ class VendingMachineViewController: UIViewController {
 
         output.juiceOrderedMessageAction
             .emit(onNext: { message in
-                let actions = [UIAlertController.AlertAction.action(title: "OK", style: .default, value: AlertAction.ok)]
+                let actions = [UIAlertController.AlertAction.action(
+                    title: AlertActionMessage.ok,
+                    style: .default,
+                    value: AlertAction.ok
+                )]
 
                 UIAlertController
                     .present(in: self, title: nil, message: message, style: .alert, actions: actions)
@@ -119,4 +123,8 @@ class VendingMachineViewController: UIViewController {
 
 private enum AlertAction {
     case ok
+}
+
+private enum AlertActionMessage {
+    static let ok = "OK"
 }

@@ -127,9 +127,11 @@ class VendingMachineViewController: UIViewController {
 }
 
 private enum AlertAction {
+
     case ok
 }
 
 private enum AlertActionMessage {
+
     static let ok = "OK"
 }

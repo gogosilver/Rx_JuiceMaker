@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0983C3283A7BCE00FB7869 /* RepositoryControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0983C2283A7BCE00FB7869 /* RepositoryControlViewController.swift */; };
+		0D2600DD285A29C10080213A /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2600DC285A29C10080213A /* UIAlertController+Extension.swift */; };
+		0D71A8242842754C00E94E4F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71A8232842754C00E94E4F /* ViewModelType.swift */; };
+		0D71A8262842764500E94E4F /* VendingMachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71A8252842764500E94E4F /* VendingMachineViewModel.swift */; };
+		0DBD0F7E283E079B00441F85 /* Juice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD0F7D283E079B00441F85 /* Juice.swift */; };
+		0DBD0F80283E080400441F85 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD0F7F283E080400441F85 /* Fruit.swift */; };
+		0DBD0F83283E24E600441F85 /* FruitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD0F82283E24E600441F85 /* FruitRepository.swift */; };
+		0DBD0F85283E722800441F85 /* JuiceMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD0F84283E722800441F85 /* JuiceMaker.swift */; };
+		0DBD0F88283E780100441F85 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBD0F87283E780100441F85 /* RequestError.swift */; };
 		0DD6D0AE283772900045B941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0AD283772900045B941 /* AppDelegate.swift */; };
 		0DD6D0B0283772900045B941 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0AF283772900045B941 /* SceneDelegate.swift */; };
-		0DD6D0B2283772900045B941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0B1283772900045B941 /* ViewController.swift */; };
+		0DD6D0B2283772900045B941 /* VendingMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0B1283772900045B941 /* VendingMachineViewController.swift */; };
 		0DD6D0B5283772900045B941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD6D0B3283772900045B941 /* Main.storyboard */; };
 		0DD6D0B7283772910045B941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD6D0B6283772910045B941 /* Assets.xcassets */; };
 		0DD6D0BA283772910045B941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD6D0B8283772910045B941 /* LaunchScreen.storyboard */; };
 		0DD6D0C5283772920045B941 /* Rx_JuiceMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0C4283772920045B941 /* Rx_JuiceMakerTests.swift */; };
 		0DD6D0CF283772920045B941 /* Rx_JuiceMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0CE283772920045B941 /* Rx_JuiceMakerUITests.swift */; };
 		0DD6D0D1283772920045B941 /* Rx_JuiceMakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD6D0D0283772920045B941 /* Rx_JuiceMakerUITestsLaunchTests.swift */; };
+		1B5CC723A922266E76A66D95 /* Pods_Rx_JuiceMaker_Rx_JuiceMakerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE376FCE391012215D9252A /* Pods_Rx_JuiceMaker_Rx_JuiceMakerUITests.framework */; };
+		29C6D453620A9B46A4885FE6 /* Pods_Rx_JuiceMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B237AFD18F46055A26E654 /* Pods_Rx_JuiceMaker.framework */; };
+		D92D2634994456610762C3D3 /* Pods_Rx_JuiceMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD320A5BDFFE273E6E44024 /* Pods_Rx_JuiceMakerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +48,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		099E49BEEA0F4EB8AD441312 /* Pods-Rx_JuiceMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_JuiceMakerTests.release.xcconfig"; path = "Target Support Files/Pods-Rx_JuiceMakerTests/Pods-Rx_JuiceMakerTests.release.xcconfig"; sourceTree = "<group>"; };
+		0D0983C2283A7BCE00FB7869 /* RepositoryControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryControlViewController.swift; sourceTree = "<group>"; };
+		0D2600DC285A29C10080213A /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		0D71A8232842754C00E94E4F /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		0D71A8252842764500E94E4F /* VendingMachineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineViewModel.swift; sourceTree = "<group>"; };
+		0DBD0F7D283E079B00441F85 /* Juice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juice.swift; sourceTree = "<group>"; };
+		0DBD0F7F283E080400441F85 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		0DBD0F82283E24E600441F85 /* FruitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRepository.swift; sourceTree = "<group>"; };
+		0DBD0F84283E722800441F85 /* JuiceMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuiceMaker.swift; sourceTree = "<group>"; };
+		0DBD0F87283E780100441F85 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		0DD320A5BDFFE273E6E44024 /* Pods_Rx_JuiceMakerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_JuiceMakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD6D0AA283772900045B941 /* Rx_JuiceMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx_JuiceMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD6D0AD283772900045B941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD6D0AF283772900045B941 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DD6D0B1283772900045B941 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DD6D0B1283772900045B941 /* VendingMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingMachineViewController.swift; sourceTree = "<group>"; };
 		0DD6D0B4283772900045B941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DD6D0B6283772910045B941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DD6D0B9283772910045B941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,13 @@
 		0DD6D0CA283772920045B941 /* Rx_JuiceMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rx_JuiceMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD6D0CE283772920045B941 /* Rx_JuiceMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx_JuiceMakerUITests.swift; sourceTree = "<group>"; };
 		0DD6D0D0283772920045B941 /* Rx_JuiceMakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx_JuiceMakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		44AD034B7E00417CB4CAC867 /* Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.release.xcconfig"; path = "Target Support Files/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4FC6E1C7A85DD3F7C710F1F0 /* Pods-Rx_JuiceMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_JuiceMaker.release.xcconfig"; path = "Target Support Files/Pods-Rx_JuiceMaker/Pods-Rx_JuiceMaker.release.xcconfig"; sourceTree = "<group>"; };
+		57A18468C308854860D075BD /* Pods-Rx_JuiceMakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_JuiceMakerTests.debug.xcconfig"; path = "Target Support Files/Pods-Rx_JuiceMakerTests/Pods-Rx_JuiceMakerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6FE376FCE391012215D9252A /* Pods_Rx_JuiceMaker_Rx_JuiceMakerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_JuiceMaker_Rx_JuiceMakerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C88997A783B0816997195534 /* Pods-Rx_JuiceMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_JuiceMaker.debug.xcconfig"; path = "Target Support Files/Pods-Rx_JuiceMaker/Pods-Rx_JuiceMaker.debug.xcconfig"; sourceTree = "<group>"; };
+		D2B237AFD18F46055A26E654 /* Pods_Rx_JuiceMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_JuiceMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCAB60894A84EB8F74C6215 /* Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29C6D453620A9B46A4885FE6 /* Pods_Rx_JuiceMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92D2634994456610762C3D3 /* Pods_Rx_JuiceMakerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +102,91 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5CC723A922266E76A66D95 /* Pods_Rx_JuiceMaker_Rx_JuiceMakerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2600DB285A29980080213A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0D2600DC285A29C10080213A /* UIAlertController+Extension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0D71A8222842753800E94E4F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0D71A8232842754C00E94E4F /* ViewModelType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0DBD0F79283D3DCB00441F85 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0DBD0F7A283D3DD200441F85 /* VendingMachine */,
+				0DBD0F7B283D3DD900441F85 /* RepositoryControl */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0DBD0F7A283D3DD200441F85 /* VendingMachine */ = {
+			isa = PBXGroup;
+			children = (
+				0DD6D0B1283772900045B941 /* VendingMachineViewController.swift */,
+				0D71A8252842764500E94E4F /* VendingMachineViewModel.swift */,
+			);
+			path = VendingMachine;
+			sourceTree = "<group>";
+		};
+		0DBD0F7B283D3DD900441F85 /* RepositoryControl */ = {
+			isa = PBXGroup;
+			children = (
+				0D0983C2283A7BCE00FB7869 /* RepositoryControlViewController.swift */,
+			);
+			path = RepositoryControl;
+			sourceTree = "<group>";
+		};
+		0DBD0F7C283E065300441F85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DBD0F7F283E080400441F85 /* Fruit.swift */,
+				0DBD0F7D283E079B00441F85 /* Juice.swift */,
+				0DBD0F84283E722800441F85 /* JuiceMaker.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DBD0F81283E23BE00441F85 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0DBD0F82283E24E600441F85 /* FruitRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0DBD0F86283E77F300441F85 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				0DBD0F87283E780100441F85 /* RequestError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		0DD6D0A1283772900045B941 = {
 			isa = PBXGroup;
 			children = (
 				0DD6D0AC283772900045B941 /* Rx_JuiceMaker */,
+				0DBD0F86283E77F300441F85 /* Error */,
 				0DD6D0C3283772920045B941 /* Rx_JuiceMakerTests */,
 				0DD6D0CD283772920045B941 /* Rx_JuiceMakerUITests */,
 				0DD6D0AB283772900045B941 /* Products */,
+				3F69358D30B2913E1B9DA592 /* Pods */,
+				FED35056CD7DE736A943F876 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +203,17 @@
 		0DD6D0AC283772900045B941 /* Rx_JuiceMaker */ = {
 			isa = PBXGroup;
 			children = (
+				0D71A8222842753800E94E4F /* Common */,
+				0DBD0F7C283E065300441F85 /* Model */,
+				0DBD0F81283E23BE00441F85 /* Repository */,
+				0DBD0F79283D3DCB00441F85 /* Presentation */,
 				0DD6D0AD283772900045B941 /* AppDelegate.swift */,
 				0DD6D0AF283772900045B941 /* SceneDelegate.swift */,
-				0DD6D0B1283772900045B941 /* ViewController.swift */,
-				0DD6D0B3283772900045B941 /* Main.storyboard */,
+				0D2600DB285A29980080213A /* Utility */,
 				0DD6D0B6283772910045B941 /* Assets.xcassets */,
-				0DD6D0B8283772910045B941 /* LaunchScreen.storyboard */,
 				0DD6D0BB283772910045B941 /* Info.plist */,
+				0DD6D0B8283772910045B941 /* LaunchScreen.storyboard */,
+				0DD6D0B3283772900045B941 /* Main.storyboard */,
 			);
 			path = Rx_JuiceMaker;
 			sourceTree = "<group>";
@@ -127,6 +235,29 @@
 			path = Rx_JuiceMakerUITests;
 			sourceTree = "<group>";
 		};
+		3F69358D30B2913E1B9DA592 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C88997A783B0816997195534 /* Pods-Rx_JuiceMaker.debug.xcconfig */,
+				4FC6E1C7A85DD3F7C710F1F0 /* Pods-Rx_JuiceMaker.release.xcconfig */,
+				DDCAB60894A84EB8F74C6215 /* Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.debug.xcconfig */,
+				44AD034B7E00417CB4CAC867 /* Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.release.xcconfig */,
+				57A18468C308854860D075BD /* Pods-Rx_JuiceMakerTests.debug.xcconfig */,
+				099E49BEEA0F4EB8AD441312 /* Pods-Rx_JuiceMakerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FED35056CD7DE736A943F876 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2B237AFD18F46055A26E654 /* Pods_Rx_JuiceMaker.framework */,
+				6FE376FCE391012215D9252A /* Pods_Rx_JuiceMaker_Rx_JuiceMakerUITests.framework */,
+				0DD320A5BDFFE273E6E44024 /* Pods_Rx_JuiceMakerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DD6D0D4283772920045B941 /* Build configuration list for PBXNativeTarget "Rx_JuiceMaker" */;
 			buildPhases = (
+				B56B2E9E3C433F65A4EDC907 /* [CP] Check Pods Manifest.lock */,
 				0DD6D0A6283772900045B941 /* Sources */,
 				0DD6D0A7283772900045B941 /* Frameworks */,
 				0DD6D0A8283772900045B941 /* Resources */,
+				A6E1813F38DA9BB72272EE50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DD6D0D7283772920045B941 /* Build configuration list for PBXNativeTarget "Rx_JuiceMakerTests" */;
 			buildPhases = (
+				641BC7FF6C8572AA14E18907 /* [CP] Check Pods Manifest.lock */,
 				0DD6D0BC283772920045B941 /* Sources */,
 				0DD6D0BD283772920045B941 /* Frameworks */,
 				0DD6D0BE283772920045B941 /* Resources */,
@@ -169,9 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DD6D0DA283772920045B941 /* Build configuration list for PBXNativeTarget "Rx_JuiceMakerUITests" */;
 			buildPhases = (
+				F0D15970240340B2DBCD48C0 /* [CP] Check Pods Manifest.lock */,
 				0DD6D0C6283772920045B941 /* Sources */,
 				0DD6D0C7283772920045B941 /* Frameworks */,
 				0DD6D0C8283772920045B941 /* Resources */,
+				5EA6817EB799ABD74300E8B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,14 +389,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EA6817EB799ABD74300E8B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		641BC7FF6C8572AA14E18907 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx_JuiceMakerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E1813F38DA9BB72272EE50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx_JuiceMaker/Pods-Rx_JuiceMaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rx_JuiceMaker/Pods-Rx_JuiceMaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rx_JuiceMaker/Pods-Rx_JuiceMaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B56B2E9E3C433F65A4EDC907 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx_JuiceMaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0D15970240340B2DBCD48C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DD6D0A6283772900045B941 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DD6D0B2283772900045B941 /* ViewController.swift in Sources */,
+				0DBD0F80283E080400441F85 /* Fruit.swift in Sources */,
+				0DD6D0B2283772900045B941 /* VendingMachineViewController.swift in Sources */,
 				0DD6D0AE283772900045B941 /* AppDelegate.swift in Sources */,
+				0DBD0F85283E722800441F85 /* JuiceMaker.swift in Sources */,
 				0DD6D0B0283772900045B941 /* SceneDelegate.swift in Sources */,
+				0DBD0F83283E24E600441F85 /* FruitRepository.swift in Sources */,
+				0D2600DD285A29C10080213A /* UIAlertController+Extension.swift in Sources */,
+				0D0983C3283A7BCE00FB7869 /* RepositoryControlViewController.swift in Sources */,
+				0DBD0F7E283E079B00441F85 /* Juice.swift in Sources */,
+				0D71A8242842754C00E94E4F /* ViewModelType.swift in Sources */,
+				0D71A8262842764500E94E4F /* VendingMachineViewModel.swift in Sources */,
+				0DBD0F88283E780100441F85 /* RequestError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +682,7 @@
 		};
 		0DD6D0D5283772920045B941 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C88997A783B0816997195534 /* Pods-Rx_JuiceMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,6 +693,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,12 +705,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0DD6D0D6283772920045B941 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FC6E1C7A85DD3F7C710F1F0 /* Pods-Rx_JuiceMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +722,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,12 +734,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		0DD6D0D8283772920045B941 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57A18468C308854860D075BD /* Pods-Rx_JuiceMakerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +765,7 @@
 		};
 		0DD6D0D9283772920045B941 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 099E49BEEA0F4EB8AD441312 /* Pods-Rx_JuiceMakerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +790,7 @@
 		};
 		0DD6D0DB283772920045B941 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDCAB60894A84EB8F74C6215 /* Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -558,6 +813,7 @@
 		};
 		0DD6D0DC283772920045B941 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44AD034B7E00417CB4CAC867 /* Pods-Rx_JuiceMaker-Rx_JuiceMakerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
